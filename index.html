@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Главная — Мой сайт</title>
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .carousel-image {
+    height: 500px;
+    object-fit: cover;
+    object-position: center;
+  }
+  .carousel-caption {
+    color: #000 !important;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.7);
+  }
+  @media (max-width: 768px) {
+    .carousel-image {
+      height: 250px;
+    }
+    #mainCarousel {
+      max-height: 250px;
+    }
+    .carousel-caption {
+      color: #000 !important;
+    }
+  }
+  </style>
+</head>
+<body>
+
+<!-- Навигационное меню -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <div class="container">
+    <a class="navbar-brand" href="#">МойСайт</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link active" href="index.html">Главная</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">О нас</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Карусель -->
+<div class="container mt-4">
+  <div id="mainCarousel" class="carousel slide" data-bs-ride="carousel" style="max-height: 500px; overflow: hidden; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="0" class="active" aria-current="true"></button>
+      <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="1"></button>
+      <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="2"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="https://www.govloop.com/wp-content/uploads/2015/11/HiRes-copy-4-e1481045235117-1024x647.jpg" class="d-block w-100 carousel-image" alt="Слайд 1">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Откройте для себя мир знаний</h5>
+          <p>Множество курсов от лучших преподавателей. Учитесь в любое удобное для вас время и в любом месте.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="https://static.tildacdn.com/tild6661-3366-4330-a434-633764316465/Frame_61.png" class="d-block w-100 carousel-image" alt="Слайд 2">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Сертификаты в конце прохождения курса</h5>
+          <p>Подтверждение ваших навыков - за каждый пройденный курс вы получайте официалььный сертификат.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="https://legacy.lunn.ru/sites/default/files/media/news/2022/06/07/u2m7jh4mymgfqb8g8yyhy8f-lh3oyppav0aop0nomzzfd_gi4b0axf6lkfywcea9i-mfgsgdggshymkzpono-a7z.jpg" class="d-block w-100 carousel-image" alt="Слайд 3">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Первый курс со скидкой 50%</h5>
+          <p>Скидка 50% на любой курс по промокоду "НОВИЧОК"</p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Назад</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#mainCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Вперёд</span>
+    </button>
+  </div>
+</div>
+
+<!-- Раздел "Материалы" -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center mb-4">Наши курсы</h2>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      <!-- Карточка 1 -->
+      <div class="col">
+        <div class="card h-100 shadow-sm">
+          <!img src="https://via.placeholder.com/300x200?text=Материал+1" class="card-img-top" alt="Материал 1"!>
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Веб-разработка с нуля</h5>
+            <p class="card-text"> HTML, CSS, JavaScript, Bootstrap. Создайте свой первый сайт за 4 недели.</p>
+            <a href="#" class="btn btn-primary mt-auto">Подробнее</a>
+          </div>
+        </div>
+      </div>
+      <!-- Карточка 2 -->
+      <div class="col">
+        <div class="card h-100 shadow-sm">
+          <!img src="https://via.placeholder.com/300x200?text=Материал+2" class="card-img-top" alt="Материал 2"!>
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Python для новичка</h5>
+            <p class="card-text">Научитесь работать на Python, Напишите свою первую программу уже через 3 занятия.</p>
+            <a href="#" class="btn btn-primary mt-auto">Подробнее</a>
+          </div>
+        </div>
+      </div>
+      <!-- Карточка 3 -->
+      <div class="col">
+        <div class="card h-100 shadow-sm">
+          <!img src="https://via.placeholder.com/300x200?text=Материал+3" class="card-img-top" alt="Материал 3"!>
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Английский для IT-специалистов</h5>
+            <p class="card-text">Техническая лексика, разговорная практика, подготовка к собеседованиям за рубежом.</p>
+            <a href="#" class="btn btn-primary mt-auto">Подробнее</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-dark text-light text-center py-3 mt-5">
+  <div class="container">
+    <p class="mb-0">&copy; 2025 МойСайт. Все права защищены.</p>
+  </div>
+</footer>
+
+<!-- Bootstrap JS (для карусели и других компонентов) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
